@@ -5,11 +5,11 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-type TestController struct {
+type TestAuthorization struct {
 	Authorization *authorization.Authorization
 }
 
-func NewTestController() *TestController {
+func NewTestAuthorizationController() *TestAuthorization {
 	a := new(authorization.Authorization)
 
 	// admin
@@ -20,12 +20,12 @@ func NewTestController() *TestController {
 	a.Add("user", authorization.Create, "*")
 	a.Add("user", authorization.Update, "username")
 
-	return &TestController{
+	return &TestAuthorization{
 		Authorization: a,
 	}
 }
 
-func (t *TestController) Get() fiber.Handler {
+func (t *TestAuthorization) Get() fiber.Handler {
 	return func(c *fiber.Ctx) error {
 		return c.JSON(fiber.Map{
 			"message": "Hello world",
@@ -37,7 +37,7 @@ type TestBody struct {
 	Username string `json:"username"`
 }
 
-func (t *TestController) Put() fiber.Handler {
+func (t *TestAuthorization) Put() fiber.Handler {
 	return func(c *fiber.Ctx) error {
 		return c.JSON(fiber.Map{
 			"message": "Hello world",

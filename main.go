@@ -113,7 +113,7 @@ func main() {
 	})
 
 	// testing authorization
-	test := controller.NewTestController()
+	test := controller.NewTestAuthorizationController()
 	proctected.Get("/test", test.Authorization.Middleware(authorization.Read, nil, nil), test.Get())
 	proctected.Put("/test", test.Authorization.Middleware(authorization.Update, func(c *fiber.Ctx) (authorization.Map, error) {
 		var testBody controller.TestBody
