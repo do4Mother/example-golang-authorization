@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"github.com/do4mother/belajargo/authorization"
+	"github.com/do4mother/example-golang-authorization/authorization"
 	"github.com/gofiber/fiber/v2"
 )
 

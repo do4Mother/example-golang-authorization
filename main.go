@@ -4,10 +4,10 @@ import (
 	"errors"
 	"time"
 
-	"github.com/do4mother/belajargo/authorization"
-	"github.com/do4mother/belajargo/controller"
-	"github.com/do4mother/belajargo/middleware"
-	"github.com/do4mother/belajargo/utils"
+	"github.com/do4mother/example-golang-authorization/authorization"
+	"github.com/do4mother/example-golang-authorization/controller"
+	"github.com/do4mother/example-golang-authorization/middleware"
+	"github.com/do4mother/example-golang-authorization/utils"
 	"github.com/gofiber/fiber/v2"
 	"github.com/golang-jwt/jwt/v5"
 )

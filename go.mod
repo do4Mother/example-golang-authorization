@@ -1,4 +1,4 @@
-module github.com/do4mother/belajargo
+module github.com/do4mother/example-golang-authorization
 
 go 1.21.3
 

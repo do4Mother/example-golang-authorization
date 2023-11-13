@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"github.com/do4mother/belajargo/utils"
+	"github.com/do4mother/example-golang-authorization/utils"
 	jwtware "github.com/gofiber/contrib/jwt"
 	"github.com/gofiber/fiber/v2"
 )
